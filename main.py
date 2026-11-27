@@ -30,7 +30,7 @@ def main():
         sys.exit("entry.png missing next to main.py")
     dest_dir = output_dir()
     os.makedirs(dest_dir, exist_ok=True)
-    dest = os.path.join(dest_dir, "output.png")
+    dest = os.path.join(dest_dir, "entry.png")
     shutil.copyfile(SOURCE, dest)
     digest = hashlib.sha256(open(dest, "rb").read()).hexdigest()
     if os.path.getsize(dest) != os.path.getsize(SOURCE):
